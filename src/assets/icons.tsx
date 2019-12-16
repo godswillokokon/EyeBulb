@@ -12,6 +12,14 @@ export const Pictures = (style): IconElement => (
   <Icon {...style} name='image-outline' />
 );
 
+export const Messages = (style): IconElement => (
+  <Icon {...style} name='message-circle-outline' />
+);
+
+export const Battery = (style): IconElement => (
+  <Icon {...style} name='battery-outline' />
+);
+
 export const LayoutIcon = (style): IconElement => (
   <Icon {...style} name='layout-outline' />
 );
