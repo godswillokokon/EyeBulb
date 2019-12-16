@@ -4,6 +4,8 @@ import {
   IconElement,
 } from 'react-native-ui-kitten';
 
+
+
 export const BackIcon = (style): IconElement => (
   <Icon {...style} name='arrow-back' />
 );
@@ -13,6 +15,7 @@ export const Pictures = (style): IconElement => (
 );
 
 export const Messages = (style): IconElement => (
+
   <Icon {...style} name='message-circle-outline' />
 );
 

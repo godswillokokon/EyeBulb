@@ -7,8 +7,11 @@ import { AppRoute } from './app-routes';
 import { HomeTabBar, HomeDrawer, AboutScreen, GroupsScreen, PanicScreen } from '../scenes/home';
 import { HomeIcon, InfoIcon, Group, PersonIcon, LayoutIcon, Panic } from '../assets/icons';
 
+
 const Drawer = createDrawerNavigator();
 const BottomTab = createBottomTabNavigator();
+
+
 
 const HomeBottomNavigator = (): React.ReactElement => (
   <BottomTab.Navigator tabBar={props => <HomeTabBar {...props} />}>
@@ -25,7 +28,9 @@ const HomeBottomNavigator = (): React.ReactElement => (
   </BottomTab.Navigator>
 );
 
+
 export const HomeNavigator = (): React.ReactElement => (
+
   <Drawer.Navigator drawerContent={props => <HomeDrawer {...props} />}>
     <Drawer.Screen
       name={AppRoute.HOME}

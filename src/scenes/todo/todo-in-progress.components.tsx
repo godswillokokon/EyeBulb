@@ -17,16 +17,13 @@ import { ProgressBar } from '../../components/progress-bar.component';
 import { SearchIcon, Battery } from '../../assets/icons';
 import { Todo } from '../../data/todo.model';
 
+
 const allTodos: Todo[] = [
   Todo.mocked0(),
   Todo.mocked1(),
   Todo.mocked2(),
   Todo.mocked0(),
-  Todo.mocked1(),
-  Todo.mocked2(),
-  Todo.mocked0(),
-  Todo.mocked1(),
-  Todo.mocked2(),
+
 ];
 
 const TodoInProgressScreenComponent = (props: TodoInProgressScreenProps & ThemedComponentProps): ListElement => {
@@ -65,7 +62,7 @@ const TodoInProgressScreenComponent = (props: TodoInProgressScreenProps & Themed
         progress={item.progress}
         text={`${item.progress}%`}
       />
-      <Battery />
+      <Text> Battery</Text>
 
     </ListItem>
   );

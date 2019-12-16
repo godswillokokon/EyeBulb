@@ -12,8 +12,33 @@ import {
   SafeAreaLayoutElement,
   SaveAreaInset,
 } from '../../components/safe-area-layout.component';
+import {
+  Icon,
+  Button,
+} from 'react-native-ui-kitten';
+const iconRef = React.createRef();
+
+const onStart = () => {
+  iconRef.current.startAnimation();
+};
+
+const onStop = () => {
+  iconRef.current.stopAnimation();
+};
+
+const renderIcon = (style) => (
+  <Icon
+    {...style}
+    ref={iconRef}
+    name='alert-triangle-outline'
+    animation='shake'
+    fill='#000000'
+    animationConfig={{ cycles: Infinity }}
+  />
+);
 
 export const PanicScreen = (props: PanicScreenProps): SafeAreaLayoutElement => (
+
   <SafeAreaLayout
     style={styles.safeArea}
     insets={SaveAreaInset.TOP}>
@@ -26,6 +51,23 @@ export const PanicScreen = (props: PanicScreenProps): SafeAreaLayoutElement => (
       <Text category='h1'>
         Panic
       </Text>
+      <Button
+        icon={renderIcon}
+        onPress={onStart}
+        status='danger'
+
+      >
+        START
+    </Button>
+      <Divider />
+      <Button
+        icon={renderIcon}
+        onPress={onStop}
+        status='danger'
+
+      >
+        STOP
+    </Button>
     </Layout>
   </SafeAreaLayout>
 );
