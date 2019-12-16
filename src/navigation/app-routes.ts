@@ -10,4 +10,6 @@ export enum AppRoute {
   TODO_DETAILS = 'ToDo Details',
   PROFILE = 'Profile',
   ABOUT = 'About',
+  GROUP = 'Group',
+  PANIC = 'Panic'
 }

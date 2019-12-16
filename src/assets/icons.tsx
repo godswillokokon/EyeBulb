@@ -16,8 +16,16 @@ export const Messages = (style): IconElement => (
   <Icon {...style} name='message-circle-outline' />
 );
 
+export const Panic = (style): IconElement => (
+  <Icon {...style} name='alert-triangle-outline' />
+);
+
 export const Battery = (style): IconElement => (
   <Icon {...style} name='battery-outline' />
+);
+
+export const Group = (style): IconElement => (
+  <Icon {...style} name='keypad-outline' />
 );
 
 export const LayoutIcon = (style): IconElement => (

@@ -19,7 +19,7 @@ const ProgressBarComponent = ({ progress, text, ...props }: ProgressBarProps): R
     <View
       {...props}
       style={[props.themedStyle.progressContainer, props.style]}>
-      <View style={[props.themedStyle.progress, { width: `${progress}%` }]}/>
+      <View style={[props.themedStyle.progress, { width: `${progress}%` }]} />
     </View>
     {text && <Text style={props.themedStyle.text} category='c2'>{text}</Text>}
   </View>

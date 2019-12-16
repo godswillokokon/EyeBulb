@@ -14,7 +14,7 @@ import {
 import { TodoInProgressScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import { ProgressBar } from '../../components/progress-bar.component';
-import { SearchIcon } from '../../assets/icons';
+import { SearchIcon, Battery } from '../../assets/icons';
 import { Todo } from '../../data/todo.model';
 
 const allTodos: Todo[] = [
@@ -65,6 +65,8 @@ const TodoInProgressScreenComponent = (props: TodoInProgressScreenProps & Themed
         progress={item.progress}
         text={`${item.progress}%`}
       />
+      <Battery />
+
     </ListItem>
   );
 
