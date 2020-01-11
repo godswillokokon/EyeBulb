@@ -8,6 +8,10 @@ import {
   Card
 } from 'react-native-ui-kitten';
 import { TodoDoneScreenProps } from '../../navigation/todo.navigator';
+import { AppRoute } from '../../navigation/app-routes';
+import { ProgressBar } from '../../components/progress-bar.component';
+import { SearchIcon, Battery } from '../../assets/icons';
+import { Todo } from '../../data/todo.model';
 
 export const CustomHeader = () => (
   <React.Fragment>

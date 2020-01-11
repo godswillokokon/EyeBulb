@@ -8,13 +8,15 @@ import {
   ListItem,
   ListItemElement,
   Text,
+  Button,
+  ButtonGroup,
   ThemedComponentProps,
   withStyles,
 } from 'react-native-ui-kitten';
 import { TodoInProgressScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import { ProgressBar } from '../../components/progress-bar.component';
-import { SearchIcon, Battery } from '../../assets/icons';
+import { SearchIcon, Alarm, AlarmOff, EyeIcon, EyeOffIcon, Bulb } from '../../assets/icons';
 import { Todo } from '../../data/todo.model';
 
 
@@ -57,12 +59,20 @@ const TodoInProgressScreenComponent = (props: TodoInProgressScreenProps & Themed
         category='c1'>
         {item.description}
       </Text>
+
       <ProgressBar
         style={props.themedStyle.itemProgressBar}
         progress={item.progress}
         text={`${item.progress}%`}
       />
-      <Text> Battery</Text>
+
+      <ButtonGroup style={props.themedStyle.buttonGroup} appearance='outline'>
+        <Button icon={EyeIcon}></Button>
+        <Button icon={EyeOffIcon}></Button>
+        <Button icon={Alarm}></Button>
+        <Button icon={AlarmOff}></Button>
+        <Button icon={Bulb}></Button>
+      </ButtonGroup>
 
     </ListItem>
   );
@@ -105,6 +115,9 @@ export const TodoInProgressScreen = withStyles(TodoInProgressScreenComponent, (t
   itemProgressBar: {
     width: '50%',
     marginVertical: 12,
+  },
+  buttonGroup: {
+    margin: 8,
   },
 }));
 

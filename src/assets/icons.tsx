@@ -31,6 +31,18 @@ export const Group = (style): IconElement => (
   <Icon {...style} name='keypad-outline' />
 );
 
+export const Alarm = (style): IconElement => (
+  <Icon {...style} name='bell-outline' />
+);
+
+export const AlarmOff = (style): IconElement => (
+  <Icon {...style} name='bell-off-outline' />
+);
+
+export const Bulb = (style): IconElement => (
+  <Icon {...style} name='bulb-outline' />
+);
+
 export const LayoutIcon = (style): IconElement => (
   <Icon {...style} name='layout-outline' />
 );
